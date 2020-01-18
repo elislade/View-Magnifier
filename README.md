@@ -15,7 +15,7 @@ struct ContentView: View {
 ![View Magnifier v1.0](read_me.gif)
 
 ## Authors
-* **Eli Slade** - *Inital Work* - [Eli Slade](https://github.com/elislade)
+* **Eli Slade** - *Initial Work* - [Eli Slade](https://github.com/elislade)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

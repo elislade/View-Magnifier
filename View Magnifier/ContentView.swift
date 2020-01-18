@@ -1,16 +1,29 @@
-//
-//  ContentView.swift
-//  View Magnifier
-//
-//  Created by Eli Slade on 2020-01-15.
-//  Copyright © 2020 Eli Slade. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State var point = Identified(data: CGPoint(x: 200, y: 350))
+    @State var selected = 0
+    
     var body: some View {
-        Text("Hello, World!")
+        TabView(selection: $selected) {
+            ExampleA().magnify($point)
+                .tag(0)
+                .tabItem {
+                    Image(systemName: "a.circle\(selected == 0 ? ".fill" : "")")
+                        .imageScale(.large)
+                    Text("Example")
+                }
+
+            ExampleB().magnify($point)
+                .tag(1)
+                .tabItem {
+                    Image(systemName: "b.circle\(selected == 1 ? ".fill" : "")")
+                        .imageScale(.large)
+                    Text("Example")
+                }
+        }
+        .edgesIgnoringSafeArea(.top)
+        .environment(\.horizontalSizeClass, .compact)
     }
 }
 

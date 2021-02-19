@@ -4,15 +4,13 @@ This view magnifier project enables the magnification of any SwiftUI view. Just 
 
 ```
 struct ContentView: View {
-    @State var point = Identified(data: CGPoint(x: 200, y: 350))
+    @State private var point = CGPoint(x: 200, y: 350)
     
     var body: some View {
-        Image().magnify($point)
+        Image("example").magnify($point)
     }
 }
 ```
-
-![View Magnifier v1.0](read_me.gif)
 
 ## Authors
 * **Eli Slade** - *Initial Work* - [Eli Slade](https://github.com/elislade)
